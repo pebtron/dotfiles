@@ -38,6 +38,8 @@ augroup filetype
         au! BufRead,BufNewFile *.obj    set filetype=php
         au! BufRead,BufNewFile *.phtml  set filetype=php
         au! BufRead,BufNewFile *.phps   set filetype=php
+        au! BufRead,BufNewFile *.dec    set filetype=deck
+        au! BufRead,BufNewFile *.dlist  set filetype=deck
 augroup END
 
 " We know xterm-debian is a color terminal
