@@ -1,5 +1,4 @@
 " $Id$
-" paul2
 " Configuration file for gvim
 " Written for Debian GNU/Linux by W.Akkerman <wakkerma@debian.org>
 " Some modifications by J.H.M. Dassen <jdassen@wi.LeidenUniv.nl>
