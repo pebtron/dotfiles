@@ -181,3 +181,6 @@ map ,d :s/^\([/(]\*\\|<!--\) \(.*\) \(\*[/)]\\|-->\)$/\2/<CR>:nohlsearch<CR>
 " EnhancedCommentify
 source ~/.vim/plugin/EnhancedCommentify.vim
 helptags ~/.vim/doc
+
+" GPG support
+source ~/.vim/gpg.vim
