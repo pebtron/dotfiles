@@ -86,7 +86,7 @@ colorscheme darkdot
 
 " Debian uses compressed helpfiles. We must inform vim that the main
 " helpfiles is compressed. Other helpfiles are stated in the tags-file.
-set helpfile=$VIMRUNTIME/doc/help.txt.gz
+"set helpfile=$VIMRUNTIME/doc/help.txt.gz
 
 " The following are commented out as they cause vim to behave a lot
 " different from regular vi. They are highly recommended though.
