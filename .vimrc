@@ -105,7 +105,6 @@ set shiftwidth=4
 set tabstop=4
 
 " abbr's
-iab teh			the
 iab alos		also
 iab bianry	binary
 iab charcter	character
