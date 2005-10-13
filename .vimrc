@@ -116,6 +116,8 @@ iab seperate	separate
 iab tpyo		typo
 iab suprise		surprise
 iab ehco		echo
+iab salien      saline
+iab chciago     chicago
 
 ab ADDR			paul@moonkhan.org
 ab WWW			www.moonkhan.org
