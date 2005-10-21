@@ -32,8 +32,11 @@ set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.i
 augroup filetype
         au!
         au! BufRead,BufNewFile *.php    set filetype=php
+        au! BufRead,BufNewFile *.php    set formatoptions=acroq
         au! BufRead,BufNewFile *.inc    set filetype=php
+        au! BufRead,BufNewFile *.inc    set formatoptions=acroq
         au! BufRead,BufNewFile *.html   set filetype=php
+        au! BufRead,BufNewFile *.html   set formatoptions=acroq
         au! BufRead,BufNewFile *.htm    set filetype=php
         au! BufRead,BufNewFile *.obj    set filetype=php
         au! BufRead,BufNewFile *.phtml  set filetype=php
