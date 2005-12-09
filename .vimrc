@@ -124,6 +124,7 @@ iab chciago     chicago
 
 ab ADDR			paul@moonkhan.org
 ab WWW			www.moonkhan.org
+ab EAUP         EAUP http://www.uchicago.edu/publicserver/
 
 ab #b /********************************************************
 ab #e ********************************************************/
@@ -189,4 +190,5 @@ source ~/.vim/plugin/EnhancedCommentify.vim
 helptags ~/.vim/doc
 
 " GPG support
-source ~/.vim/gpg.vim
+"source ~/.vim/gpg.vim
+source ~/.vim/gnupg.vim
