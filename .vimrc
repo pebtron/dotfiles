@@ -24,6 +24,8 @@ set viminfo='20,\"50	" read/write a .viminfo file, don't store more than
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 
+set foldmethod=marker
+
 " Suffixes that get lower priority when doing tab completion for filenames.
 " These are files we are not likely to want to edit or read.
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
