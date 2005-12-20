@@ -110,23 +110,22 @@ set shiftwidth=4
 set tabstop=4
 
 " abbr's
-iab alos		also
-iab bianry	binary
-iab charcter	character
-iab charcters 	characters
-iab exmaple		example
-iab exmaples	examples
-iab shoudl		should
-iab seperate	separate
-iab tpyo		typo
-iab suprise		surprise
-iab ehco		echo
+iab alos        also
+iab bianry      binary
+iab charcter    character
+iab charcters   characters
+iab exmaple     example
+iab exmaples    examples
+iab shoudl      should
+iab seperate    separate
+iab tpyo        typo
+iab suprise     surprise
+iab ehco        echo
 iab salien      saline
 iab chciago     chicago
-
-ab ADDR			paul@moonkhan.org
-ab WWW			www.moonkhan.org
-ab EAUP         EAUP http://www.uchicago.edu/publicserver/
+iab EAUP        EAUP http://www.uchicago.edu/publicserver/
+cab SFTP        r ~/Mail/uchicago/00sftp.txt
+cab NOSFTP      r ~/Mail/uchicago/00reasons.txt
 
 ab #b /********************************************************
 ab #e ********************************************************/
