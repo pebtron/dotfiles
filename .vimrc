@@ -4,7 +4,6 @@
 " Some modifications by J.H.M. Dassen <jdassen@wi.LeidenUniv.nl>
 "let myfiletypefile = "~/vim/myfiletypes.vim"
 "let $VIMRUNTIME="/home/pbarton/vim/vim57/"
-"let $VIMRUNTIME="/home/bartonp/vim/vim57/"
 
 set modelines=5 " Override Debian's /etc/vim/vimrc setting of 0
 
@@ -60,37 +59,6 @@ if has("syntax")
   syntax on  " Default to no syntax highlightning 
 endif
 
-set background=dark
-"" Here come my colors...
-"if &background == "dark"
-"  hi Comment    ctermfg=DarkBlue
-"  hi Constant   ctermfg=DarkGreen
-"  hi Special    ctermfg=LightGrey
-"  hi Function   ctermfg=LightGrey
-"  hi Identifier ctermfg=DarkGreen
-"  hi Statement  ctermfg=LightGrey
-"  hi PreProc    ctermfg=LightGrey
-"  hi Type       ctermfg=LightGrey
-"  hi Ignore     ctermfg=Black
-"else
-"  hi Comment    ctermfg=DarkBlue
-"  hi Constant   ctermfg=DarkGreen
-"  hi Special    ctermfg=LightGrey
-"  hi Function   ctermfg=LightGrey
-"  hi Identifier ctermfg=DarkGreen
-"  hi Statement  ctermfg=LightGrey
-"  hi PreProc    ctermfg=LightGrey
-"  hi Type       ctermfg=LightGrey
-"  hi Ignore     ctermfg=Black
-"endif
-"hi Error term=reverse ctermbg=Red ctermfg=White
-"hi Todo  term=standout ctermbg=Yellow ctermfg=Black
-
-" Use Vim 6.0 custom color file
-"let g:colors_name = "moonkhan"
-"colorscheme moonkhan cool darkdot manxome navajo-night
-colorscheme darkdot
-
 " Debian uses compressed helpfiles. We must inform vim that the main
 " helpfiles is compressed. Other helpfiles are stated in the tags-file.
 "set helpfile=$VIMRUNTIME/doc/help.txt.gz
@@ -108,6 +76,7 @@ set background=dark
 set expandtab
 set shiftwidth=4
 set tabstop=4
+colorscheme darkdot
 
 " abbr's
 iab alos        also
@@ -186,10 +155,5 @@ map ,( :s/^\(.*\)$/\(\* \1 \*\)/<CR>
 map ,< :s/^\(.*\)$/<!-- \1 -->/<CR>
 map ,d :s/^\([/(]\*\\|<!--\) \(.*\) \(\*[/)]\\|-->\)$/\2/<CR>:nohlsearch<CR> 
 
-" EnhancedCommentify
-source ~/.vim/plugin/EnhancedCommentify.vim
-helptags ~/.vim/doc
-
 " GPG support
-"source ~/.vim/gpg.vim
 source ~/.vim/gnupg.vim
