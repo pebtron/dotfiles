@@ -44,6 +44,7 @@ augroup filetype
         au! BufRead,BufNewFile *.phps   set filetype=php
         au! BufRead,BufNewFile *.dec    set filetype=deck
         au! BufRead,BufNewFile *.dlist  set filetype=deck
+        au! BufRead,BufNewFile syslog-ng.conf  set filetype=syslog-ng
 augroup END
 
 " We know xterm-debian is a color terminal
