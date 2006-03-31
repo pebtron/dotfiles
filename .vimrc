@@ -94,8 +94,8 @@ iab ehco        echo
 iab salien      saline
 iab chciago     chicago
 iab EAUP        EAUP http://www.uchicago.edu/publicserver/
-cab SFTP        r ~/Mail/uchicago/00sftp.txt
-cab NOSFTP      r ~/Mail/uchicago/00reasons.txt
+"cab SFTP        r ~/Mail/uchicago/00sftp.txt
+"cab NOSFTP      r ~/Mail/uchicago/00reasons.txt
 
 ab #b /********************************************************
 ab #e ********************************************************/
