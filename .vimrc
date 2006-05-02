@@ -156,9 +156,6 @@ map ,( :s/^\(.*\)$/\(\* \1 \*\)/<CR>
 map ,< :s/^\(.*\)$/<!-- \1 -->/<CR>
 map ,d :s/^\([/(]\*\\|<!--\) \(.*\) \(\*[/)]\\|-->\)$/\2/<CR>:nohlsearch<CR> 
 
-" GPG support
-source ~/.vim/gnupg.vim
-
 " minibufexpl settings
 let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 1
