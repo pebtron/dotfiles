@@ -84,15 +84,16 @@ iab alos        also
 iab bianry      binary
 iab charcter    character
 iab charcters   characters
-iab exmaple     example
-iab exmaples    examples
-iab shoudl      should
-iab seperate    separate
-iab tpyo        typo
-iab suprise     surprise
-iab ehco        echo
-iab salien      saline
 iab chciago     chicago
+iab ehco        echo
+iab goign       going
+iab salien      saline
+iab seperate    separate
+iab shoudl      should
+iab suprise     surprise
+iab tpyo        typo
+iab woudl       would
+iab yoru        your
 iab EAUP        EAUP http://www.uchicago.edu/publicserver/
 "cab SFTP        r ~/Mail/uchicago/00sftp.txt
 "cab NOSFTP      r ~/Mail/uchicago/00reasons.txt
