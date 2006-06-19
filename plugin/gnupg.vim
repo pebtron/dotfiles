@@ -51,29 +51,29 @@ augroup GnuPG
 
 	" First make sure nothing is written to ~/.viminfo while editing
 	" an encrypted file.
-	autocmd BufNewFile,BufReadPre,FileReadPre      *.gpg set viminfo=
+	autocmd BufNewFile,BufReadPre,FileReadPre      *.gpg,*.asc set viminfo=
 	" We don't want a swap file, as it writes unencrypted data to disk
-	autocmd BufNewFile,BufReadPre,FileReadPre      *.gpg set noswapfile
+	autocmd BufNewFile,BufReadPre,FileReadPre      *.gpg,*.asc set noswapfile
 	" Force the user to edit the recipient list if he opens a new file
-	autocmd BufNewFile                             *.gpg call s:GPGEditRecipients()
+	autocmd BufNewFile                             *.gpg,*.asc call s:GPGEditRecipients()
 	" Switch to binary mode to read the encrypted file
-	autocmd BufReadPre,FileReadPre                 *.gpg set bin
-	autocmd BufReadPost,FileReadPost               *.gpg call s:GPGDecrypt()
+	autocmd BufReadPre,FileReadPre                 *.gpg,*.asc set bin
+	autocmd BufReadPost,FileReadPost               *.gpg,*.asc call s:GPGDecrypt()
 	" Switch to normal mode for editing
-	autocmd BufReadPost,FileReadPost               *.gpg set nobin
+	autocmd BufReadPost,FileReadPost               *.gpg,*.asc set nobin
 	" Call the autocommand for the file minus .gpg$
-	autocmd BufReadPost,FileReadPost               *.gpg execute ":doautocmd BufReadPost " . expand("%:r")
-	autocmd BufReadPost,FileReadPost               *.gpg execute ":redraw!"
+	autocmd BufReadPost,FileReadPost               *.gpg,*.asc execute ":doautocmd BufReadPost " . expand("%:r")
+	autocmd BufReadPost,FileReadPost               *.gpg,*.asc execute ":redraw!"
 
 	" Switch to binary mode before encrypt the file
-	autocmd BufWritePre,FileWritePre               *.gpg set bin
+	autocmd BufWritePre,FileWritePre               *.gpg,*.asc set bin
 	" Convert all text to encrypted text before writing
-	autocmd BufWritePre,FileWritePre               *.gpg call s:GPGEncrypt()
+	autocmd BufWritePre,FileWritePre               *.gpg,*.asc call s:GPGEncrypt()
 	" Undo the encryption so we are back in the normal text, directly
 	" after the file has been written.
-	autocmd BufWritePost,FileWritePost             *.gpg silent u
+	autocmd BufWritePost,FileWritePost             *.gpg,*.asc silent u
 	" Switch back to normal mode for editing
-	autocmd BufWritePost,FileWritePost             *.gpg set nobin
+	autocmd BufWritePost,FileWritePost             *.gpg,*.asc set nobin
 augroup END
 " Section: Highlight setup {{{1
 highlight default GPGWarning                   term=reverse ctermfg=Yellow guifg=Yellow
