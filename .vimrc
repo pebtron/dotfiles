@@ -171,4 +171,4 @@ map ,t !ap~/webadmin/tools/bin/tablify.pl<CR>
 " SVN diff mapping
 map <Leader>9 :new<CR>:read !svn diff<CR>:set syntax=diff buftype=nofile<CR>gg
 
-setlocal spell spelllang=en_us
+"setlocal spell spelllang=en_us
