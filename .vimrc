@@ -106,6 +106,9 @@ ab #e ********************************************************/
 " wrap <td> around VISUALLY selected text
 vmap std "zdi<td><C-R>z</td><ESC>
 
+" svn blame, source: http://tammersaleh.com/posts/quick-vim-svn-blame-snippet
+vmap gl :<C-U>!svn blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
+
 " Reload .vimrc
 nmap ,s :source ~/.vimrc
 nmap ,v :e ~/.vimrc
