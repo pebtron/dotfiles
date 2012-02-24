@@ -5,6 +5,10 @@
 "let myfiletypefile = "~/vim/myfiletypes.vim"
 "let $VIMRUNTIME="/home/pbarton/vim/vim57/"
 
+call pathogen#infect()
+call pathogen#helptags()
+filetype plugin indent on
+
 set modelines=5 " Override Debian's /etc/vim/vimrc setting of 0
 
 " Normally we use vim-extensions. If you want true vi-compatibility
@@ -32,22 +36,22 @@ set foldmethod=marker
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 
 " Filetypes
-augroup filetype
-        au!
-        au! BufRead,BufNewFile *.php    set filetype=php
-        au! BufRead,BufNewFile *.php    set formatoptions=acroq
-        au! BufRead,BufNewFile *.inc    set filetype=php
-        au! BufRead,BufNewFile *.inc    set formatoptions=acroq
-        au! BufRead,BufNewFile *.html   set filetype=php
-        au! BufRead,BufNewFile *.html   set formatoptions=acroq
-        au! BufRead,BufNewFile *.htm    set filetype=php
-        au! BufRead,BufNewFile *.obj    set filetype=php
-        au! BufRead,BufNewFile *.phtml  set filetype=php
-        au! BufRead,BufNewFile *.phps   set filetype=php
-        au! BufRead,BufNewFile *.dec    set filetype=deck
-        au! BufRead,BufNewFile *.dlist  set filetype=deck
-        au! BufRead,BufNewFile syslog-ng.conf  set filetype=syslog-ng
-augroup END
+"augroup filetype
+"        au!
+"        au! BufRead,BufNewFile *.php    set filetype=php
+"        au! BufRead,BufNewFile *.php    set formatoptions=acroq
+"        au! BufRead,BufNewFile *.inc    set filetype=php
+"        au! BufRead,BufNewFile *.inc    set formatoptions=acroq
+"        au! BufRead,BufNewFile *.html   set filetype=php
+"        au! BufRead,BufNewFile *.html   set formatoptions=acroq
+"        au! BufRead,BufNewFile *.htm    set filetype=php
+"        au! BufRead,BufNewFile *.obj    set filetype=php
+"        au! BufRead,BufNewFile *.phtml  set filetype=php
+"        au! BufRead,BufNewFile *.phps   set filetype=php
+"        au! BufRead,BufNewFile *.dec    set filetype=deck
+"        au! BufRead,BufNewFile *.dlist  set filetype=deck
+"        au! BufRead,BufNewFile syslog-ng.conf  set filetype=syslog-ng
+"augroup END
 
 " We know xterm-debian is a color terminal
 if &term =~ "xterm-debian" || &term =~ "xterm-xfree86"
@@ -122,8 +126,6 @@ map <F11> :set nopaste<CR>
 imap <F10> <C-O>:set paste<CR>
 imap <F11> <nop>
 set pastetoggle=<F11>
-
-"filetype plugin indent off
 
 " Tag Select/Wrapper 
 " These mappings and TagSelection function will allow you to place " an XML tag around either the current word, or the current selected " text 
