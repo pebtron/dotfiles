@@ -26,8 +26,6 @@ set nocindent       " c indent
 set nosmartindent       " smart indent
 set textwidth=72		" Don't wrap words by default
 "set textwidth=76
-set nobackup		" Don't keep a backup file
-set noswapfile
 set viminfo='20,\"50	" read/write a .viminfo file, don't store more than
 			" 50 lines of registers
 set history=50		" keep 50 lines of command line history
@@ -36,9 +34,12 @@ set wildmenu " thanks dhathorn
 
 set foldmethod=marker
 "set noshelltemp
+
 set hlsearch
 set showcmd
 set nojoinspaces
+set nobackup
+set noswapfile
 
 " Suffixes that get lower priority when doing tab completion for filenames.
 " These are files we are not likely to want to edit or read.
