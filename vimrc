@@ -27,6 +27,7 @@ set nosmartindent       " smart indent
 set textwidth=72		" Don't wrap words by default
 "set textwidth=76
 set nobackup		" Don't keep a backup file
+set noswapfile
 set viminfo='20,\"50	" read/write a .viminfo file, don't store more than
 			" 50 lines of registers
 set history=50		" keep 50 lines of command line history
