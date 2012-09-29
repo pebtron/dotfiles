@@ -90,7 +90,7 @@ set incsearch		" Incremental search
 
 " personal settings
 set background=dark
-colorscheme darkdot
+colorscheme molokai
 
 " abbr's
 iab alos        also
