@@ -20,7 +20,7 @@ nmap <leader>e :set expandtab!<CR>:set expandtab?<CR>
 " remove change the following statements
 set nocompatible	" Use Vim defaults (much better!)
 set backspace=2		" allow backspacing over everything in insert mode
-" Now we set some defaults for the editor 
+" Now we set some defaults for the editor
 set noautoindent		" always set autoindenting on
 set nocindent       " c indent
 set nosmartindent       " smart indent
@@ -35,6 +35,7 @@ set wildmenu " thanks dhathorn
 
 set foldmethod=marker
 "set noshelltemp
+set hlsearch
 
 " Suffixes that get lower priority when doing tab completion for filenames.
 " These are files we are not likely to want to edit or read.
@@ -66,9 +67,9 @@ if &term =~ "xterm-debian" || &term =~ "xterm-xfree86"
 endif
 
 " Vim5 comes with syntaxhighlighting. If you want to enable syntaxhightlighting
-" by default uncomment the next three lines. 
+" by default uncomment the next three lines.
 if has("syntax")
-  syntax on  " Default to no syntax highlightning 
+  syntax on  " Default to no syntax highlightning
 endif
 
 " Debian uses compressed helpfiles. We must inform vim that the main
@@ -127,7 +128,7 @@ set listchars=tab:>-,trail:-
 map <leader>p :set paste!<CR>:set paste?<CR>
 
 " Tag Select/Wrapper
-" These mappings and TagSelection function will allow you to place " an XML tag around either the current word, or the current selected " text 
+" These mappings and TagSelection function will allow you to place " an XML tag around either the current word, or the current selected " text
 nmap <Leader>t viw<Leader>t
 vnoremap <Leader>t <Esc>:call TagSelection()<CR>
 
@@ -161,7 +162,7 @@ map ,c :s/^\/\/\\|^--\\|^> \\|^[#"%!;]//<CR>:nohlsearch<CR>
 map ,* :s/^\(.*\)$/\/\* \1 \*\//<CR>
 map ,( :s/^\(.*\)$/\(\* \1 \*\)/<CR>
 map ,< :s/^\(.*\)$/<!-- \1 -->/<CR>
-map ,d :s/^\([/(]\*\\|<!--\) \(.*\) \(\*[/)]\\|-->\)$/\2/<CR>:nohlsearch<CR> 
+map ,d :s/^\([/(]\*\\|<!--\) \(.*\) \(\*[/)]\\|-->\)$/\2/<CR>:nohlsearch<CR>
 
 " tablify.pl macro
 map ,t !ap~/webadmin/tools/bin/tablify.pl<CR>
@@ -196,3 +197,17 @@ function! SummarizeTabs()
   endtry
 endfunction
 nmap <leader>t :call SummarizeTabs()<CR>
+
+" http://vimcasts.org/episodes/tidying-whitespace/
+function! <SID>StripTrailingWhitespaces()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    %s/\s\+$//e
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
+nmap <leader>s :call <SID>StripTrailingWhitespaces()<CR>
