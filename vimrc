@@ -11,6 +11,11 @@ filetype plugin indent on
 
 set modelines=5 " Override Debian's /etc/vim/vimrc setting of 0
 
+" Tab settings
+" http://vimcasts.org/episodes/tabs-and-spaces/
+set ts=4 sts=4 sw=4 et
+nmap <leader>e :set expandtab!<CR>:set expandtab?<CR>
+
 " Normally we use vim-extensions. If you want true vi-compatibility
 " remove change the following statements
 set nocompatible	" Use Vim defaults (much better!)
@@ -80,9 +85,6 @@ set incsearch		" Incremental search
 
 " personal settings
 set background=dark
-set expandtab
-set shiftwidth=4
-set tabstop=4
 colorscheme darkdot
 
 " abbr's
@@ -124,7 +126,7 @@ set listchars=tab:>-,trail:-
 " Toggle paste
 map <leader>p :set paste!<CR>:set paste?<CR>
 
-" Tag Select/Wrapper 
+" Tag Select/Wrapper
 " These mappings and TagSelection function will allow you to place " an XML tag around either the current word, or the current selected " text 
 nmap <Leader>t viw<Leader>t
 vnoremap <Leader>t <Esc>:call TagSelection()<CR>
@@ -176,3 +178,21 @@ map <Leader>9 :new<CR>:read !svn diff<CR>:set syntax=diff buftype=nofile<CR>gg
 "setlocal spell spelllang=en_us
 
 let @p='"aPjjddjjjjddkkkkPjjjj'
+
+" http://vimcasts.org/episodes/tabs-and-spaces/
+function! SummarizeTabs()
+  try
+    echohl ModeMsg
+    echon 'tabstop='.&l:ts
+    echon ' shiftwidth='.&l:sw
+    echon ' softtabstop='.&l:sts
+    if &l:et
+      echon ' expandtab'
+    else
+      echon ' noexpandtab'
+    endif
+  finally
+    echohl None
+  endtry
+endfunction
+nmap <leader>t :call SummarizeTabs()<CR>
