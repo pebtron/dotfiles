@@ -10,6 +10,7 @@ git_bundles = [
   "git://github.com/tpope/vim-fugitive.git",
   "git://github.com/rodjek/vim-puppet.git",
   "git://github.com/tsaleh/vim-tmux.git",
+  "git://github.com/nelstrom/vim-blackboard.git",
 ]
 
 vim_org_scripts = [
