@@ -37,6 +37,8 @@ set wildmenu " thanks dhathorn
 set foldmethod=marker
 "set noshelltemp
 set hlsearch
+set showcmd
+set nojoinspaces
 
 " Suffixes that get lower priority when doing tab completion for filenames.
 " These are files we are not likely to want to edit or read.
