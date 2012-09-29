@@ -117,15 +117,12 @@ vmap gl :<C-U>!svn blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR
 nmap ,s :source ~/.vimrc
 nmap ,v :e ~/.vimrc
 
-" Fix :set list
+" Toggle list
+nmap <leader>l :set list!<CR>:set list?<CR>
 set listchars=tab:>-,trail:-
 
-" Fix Vim paste bug
-map <F10> :set paste<CR>
-map <F11> :set nopaste<CR>
-imap <F10> <C-O>:set paste<CR>
-imap <F11> <nop>
-set pastetoggle=<F11>
+" Toggle paste
+map <leader>p :set paste!<CR>:set paste?<CR>
 
 " Tag Select/Wrapper 
 " These mappings and TagSelection function will allow you to place " an XML tag around either the current word, or the current selected " text 
