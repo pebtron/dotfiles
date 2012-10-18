@@ -16,6 +16,7 @@ git_bundles = [
 
 vim_org_scripts = [
   ["darkdot", "6097", "colors"],
+  ["spamassassin", "15948", "syntax"],
 ]
 
 require 'fileutils'
