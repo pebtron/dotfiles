@@ -90,8 +90,11 @@ set incsearch		" Incremental search
 
 " personal settings
 set background=dark
-colorscheme molokai
 "let g:molokai_original=1
+"colorscheme molokai
+let g:solarized_termcolors=256
+colorscheme solarized
+set background=dark
 
 " abbr's
 iab alos        also
