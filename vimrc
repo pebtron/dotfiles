@@ -89,12 +89,13 @@ set incsearch		" Incremental search
 "set autowrite		" Automatically save before commands like :next and :make
 
 " personal settings
-set background=dark
 "let g:molokai_original=1
 "colorscheme molokai
-let g:solarized_termcolors=256
-colorscheme solarized
-set background=dark
+"set background=dark
+"let g:solarized_termcolors=256
+"colorscheme solarized
+"set background=dark
+colorscheme jellybeans
 
 " abbr's
 iab alos        also
