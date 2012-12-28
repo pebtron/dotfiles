@@ -64,11 +64,11 @@ set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.i
 "augroup END
 
 " We know xterm-debian is a color terminal
-if &term =~ "xterm-debian" || &term =~ "xterm-xfree86"
-  set t_Co=16
-  set t_Sf=[3%dm
-  set t_Sb=[4%dm
-endif
+"if &term =~ "xterm-debian" || &term =~ "xterm-xfree86"
+"  set t_Co=16
+"  set t_Sf=[3%dm
+"  set t_Sb=[4%dm
+"endif
 
 " Vim5 comes with syntaxhighlighting. If you want to enable syntaxhightlighting
 " by default uncomment the next three lines.
