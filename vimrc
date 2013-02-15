@@ -25,9 +25,7 @@ set noautoindent		" always set autoindenting on
 set nocindent       " c indent
 set nosmartindent       " smart indent
 set textwidth=72		" Don't wrap words by default
-"set textwidth=76
-set viminfo='20,\"50	" read/write a .viminfo file, don't store more than
-			" 50 lines of registers
+set viminfo='20,\"50	" read/write a .viminfo file, don't store more than 50 lines of registers
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set wildmenu " thanks dhathorn
@@ -96,6 +94,9 @@ colorscheme molokai
 "colorscheme solarized
 "set background=dark
 "colorscheme jellybeans
+
+" Select a different colorscheme when in Mutt
+autocmd FileType mail colorscheme jellybeans
 
 " abbr's
 iab alos        also
