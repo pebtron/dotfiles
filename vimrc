@@ -68,6 +68,10 @@ set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.i
 "  set t_Sb=[4%dm
 "endif
 
+if &term =~ "screen"
+  set t_Co=256
+endif
+
 " Vim5 comes with syntaxhighlighting. If you want to enable syntaxhightlighting
 " by default uncomment the next three lines.
 if has("syntax")
