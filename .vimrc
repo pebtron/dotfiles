@@ -1,15 +1,10 @@
-" $Id$
-" Configuration file for gvim
-" Written for Debian GNU/Linux by W.Akkerman <wakkerma@debian.org>
-" Some modifications by J.H.M. Dassen <jdassen@wi.LeidenUniv.nl>
-"let myfiletypefile = "~/vim/myfiletypes.vim"
-"let $VIMRUNTIME="/home/pbarton/vim/vim57/"
+" Vim settings, a work in progress since 1999
 
 call pathogen#infect()
 call pathogen#helptags()
 filetype plugin indent on
 
-set modelines=5 " Override Debian's /etc/vim/vimrc setting of 0
+set modelines=5
 
 " Tab settings
 " http://vimcasts.org/episodes/tabs-and-spaces/
@@ -43,24 +38,6 @@ set noswapfile
 " These are files we are not likely to want to edit or read.
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 
-" Filetypes
-"augroup filetype
-"        au!
-"        au! BufRead,BufNewFile *.php    set filetype=php
-"        au! BufRead,BufNewFile *.php    set formatoptions=acroq
-"        au! BufRead,BufNewFile *.inc    set filetype=php
-"        au! BufRead,BufNewFile *.inc    set formatoptions=acroq
-"        au! BufRead,BufNewFile *.html   set filetype=php
-"        au! BufRead,BufNewFile *.html   set formatoptions=acroq
-"        au! BufRead,BufNewFile *.htm    set filetype=php
-"        au! BufRead,BufNewFile *.obj    set filetype=php
-"        au! BufRead,BufNewFile *.phtml  set filetype=php
-"        au! BufRead,BufNewFile *.phps   set filetype=php
-"        au! BufRead,BufNewFile *.dec    set filetype=deck
-"        au! BufRead,BufNewFile *.dlist  set filetype=deck
-"        au! BufRead,BufNewFile syslog-ng.conf  set filetype=syslog-ng
-"augroup END
-
 " We know xterm-debian is a color terminal
 "if &term =~ "xterm-debian" || &term =~ "xterm-xfree86"
 "  set t_Co=16
@@ -68,19 +45,14 @@ set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.i
 "  set t_Sb=[4%dm
 "endif
 
+" Help with 256 colors
 if &term =~ "screen"
   set t_Co=256
 endif
 
-" Vim5 comes with syntaxhighlighting. If you want to enable syntaxhightlighting
-" by default uncomment the next three lines.
 if has("syntax")
-  syntax on  " Default to no syntax highlightning
+  syntax on
 endif
-
-" Debian uses compressed helpfiles. We must inform vim that the main
-" helpfiles is compressed. Other helpfiles are stated in the tags-file.
-"set helpfile=$VIMRUNTIME/doc/help.txt.gz
 
 " The following are commented out as they cause vim to behave a lot
 " different from regular vi. They are highly recommended though.
@@ -117,15 +89,9 @@ iab suprise     surprise
 iab tpyo        typo
 iab woudl       would
 iab yoru        your
-iab EAUP        EAUP http://www.uchicago.edu/publicserver/
+iab EAUP        EAUP http://webspace.uchicago.edu/publicserver/
 "cab SFTP        r ~/Mail/uchicago/00sftp.txt
 "cab NOSFTP      r ~/Mail/uchicago/00reasons.txt
-
-ab #b /********************************************************
-ab #e ********************************************************/
-
-" wrap <td> around VISUALLY selected text
-vmap std "zdi<td><C-R>z</td><ESC>
 
 " svn blame, source: http://tammersaleh.com/posts/quick-vim-svn-blame-snippet
 vmap gl :<C-U>!svn blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
@@ -140,26 +106,6 @@ set listchars=tab:>-,trail:-
 
 " Toggle paste
 map <leader>p :set paste!<CR>:set paste?<CR>
-
-" Tag Select/Wrapper
-" These mappings and TagSelection function will allow you to place " an XML tag around either the current word, or the current selected " text
-nmap <Leader>t viw<Leader>t
-vnoremap <Leader>t <Esc>:call TagSelection()<CR>
-
-function! TagSelection()
-  let l:tag = input("Tag name? ")
-  " exec "normal `>a</" . l:tag . ">\e"
-  " Strip off all but the first work in the tag for the end tag
-  exec "normal `>a</" .
-    \ substitute( l:tag, '[ \t"]*\(\<\w*\>\).*', '\1>\e', "" )
-  exec "normal `<i"
-    \ substitute( l:tag, '[ \t"]*\(\<.*\)', '<\1>\e', "" )
-endfunction
-
-" Templating (indent-friendly)
-:imap <buffer> ;fo <C-O>mzfor(%%%; %%%; %%%)<CR>{<CR>%%%<CR>}<CR><C-O>'z;;
-:imap <buffer> ;; <C-O>/%%%<CR><C-O>c31
-:nmap <buffer> ;; /%%%<CR>c31
 
 " lhs comments
 map ,# :s/^/#/<CR>
@@ -181,17 +127,12 @@ map ,d :s/^\([/(]\*\\|<!--\) \(.*\) \(\*[/)]\\|-->\)$/\2/<CR>:nohlsearch<CR>
 " tablify.pl macro
 map ,t !ap~/webadmin/tools/bin/tablify.pl<CR>
 
-" minibufexpl settings
-"let g:miniBufExplMapWindowNavVim = 1
-"let g:miniBufExplMapWindowNavArrows = 1
-"let g:miniBufExplMapCTabSwitchBufs = 1
-"let g:miniBufExplModSelTarget = 1
-
 " SVN diff mapping
 map <Leader>9 :new<CR>:read !svn diff<CR>:set syntax=diff buftype=nofile<CR>gg
 
 "setlocal spell spelllang=en_us
 
+" Useful during LDIF file manipulations
 let @p='"aPjjddjjjjddkkkkPjjjj'
 
 " http://vimcasts.org/episodes/tabs-and-spaces/
