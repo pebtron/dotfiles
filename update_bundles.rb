@@ -11,6 +11,7 @@ git_bundles = [
   "git://github.com/rodjek/vim-puppet.git",
   "git://github.com/tsaleh/vim-tmux.git",
   "git://github.com/nelstrom/vim-blackboard.git",
+  "git://github.com/elzr/vim-json.git",
   "git://github.com/tomasr/molokai.git",
   "git://github.com/altercation/vim-colors-solarized.git",
   "git://github.com/nanotech/jellybeans.vim.git",
