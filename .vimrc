@@ -100,6 +100,13 @@ vmap gl :<C-U>!svn blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR
 nmap ,s :source ~/.vimrc
 nmap ,v :e ~/.vimrc
 
+" Make navigating around windows easier
+" http://vimcasts.org/episodes/working-with-windows/
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
+
 " Toggle list
 nmap <leader>l :set list!<CR>:set list?<CR>
 set listchars=tab:>-,trail:-
