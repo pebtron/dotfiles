@@ -2,20 +2,20 @@
 # Source: http://tammersaleh.com/posts/the-modern-vim-config-with-pathogen
 
 git_bundles = [ 
-  "git://github.com/vim-scripts/gnupg.vim.git",
-  "git://github.com/vim-scripts/nginx.vim.git",
-  "git://github.com/msanders/snipmate.vim.git",
-  "git://github.com/scrooloose/syntastic.git",
-  "git://github.com/godlygeek/tabular.git",
-  "git://github.com/tpope/vim-fugitive.git",
-  "git://github.com/mv/mv-vim-puppet.git",
-  "git://github.com/tsaleh/vim-tmux.git",
-  "git://github.com/nelstrom/vim-blackboard.git",
-  "git://github.com/elzr/vim-json.git",
-  "git://github.com/tomasr/molokai.git",
-  "git://github.com/altercation/vim-colors-solarized.git",
-  "git://github.com/nanotech/jellybeans.vim.git",
-  "git://github.com/mattn/gist-vim.git",
+  "https://github.com/vim-scripts/gnupg.vim.git",
+  "https://github.com/vim-scripts/nginx.vim.git",
+  "https://github.com/msanders/snipmate.vim.git",
+  "https://github.com/scrooloose/syntastic.git",
+  "https://github.com/godlygeek/tabular.git",
+  "https://github.com/tpope/vim-fugitive.git",
+  "https://github.com/mv/mv-vim-puppet.git",
+  "https://github.com/tsaleh/vim-tmux.git",
+  "https://github.com/nelstrom/vim-blackboard.git",
+  "https://github.com/elzr/vim-json.git",
+  "https://github.com/tomasr/molokai.git",
+  "https://github.com/altercation/vim-colors-solarized.git",
+  "https://github.com/nanotech/jellybeans.vim.git",
+  "https://github.com/mattn/gist-vim.git",
 ]
 
 vim_org_scripts = [
