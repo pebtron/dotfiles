@@ -173,3 +173,13 @@ function! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfunction
 nmap <leader>s :call <SID>StripTrailingWhitespaces()<CR>
+
+" Gist
+" https://github.com/mattn/gist-vim
+let g:gist_post_private = 1
+if has("unix")
+  let s:uname = system("uname")
+  if s:uname == "Darwin\n"
+    let g:gist_clip_command = 'pbcopy'
+  endif
+endif
