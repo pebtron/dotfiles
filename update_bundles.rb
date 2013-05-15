@@ -16,6 +16,7 @@ git_bundles = [
   "https://github.com/altercation/vim-colors-solarized.git",
   "https://github.com/nanotech/jellybeans.vim.git",
   "https://github.com/mattn/gist-vim.git",
+  "https://github.com/mattn/webapi-vim.git",
 ]
 
 vim_org_scripts = [
