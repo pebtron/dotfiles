@@ -24,6 +24,7 @@ set viminfo='20,\"50	" read/write a .viminfo file, don't store more than 50 line
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set wildmenu " thanks dhathorn
+set printoptions=paper:letter,duplex:off
 
 set foldmethod=marker
 "set noshelltemp
