@@ -73,7 +73,7 @@ colorscheme molokai
 "colorscheme jellybeans
 
 " Select a different colorscheme when in Mutt
-autocmd FileType mail colorscheme jellybeans
+"autocmd FileType mail colorscheme jellybeans
 
 " abbr's
 iab alos        also
@@ -195,7 +195,9 @@ highlight TechWordsToAvoid ctermbg=red ctermfg=white
 function MatchTechWordsToAvoid()
   match TechWordsToAvoid /\c\<\(obviously\|basically\|simply\|of\scourse\|clearly\|just\|everyone\sknows\|however\|so,\|easy\)\>/
 endfunction
+autocmd FileType mail call MatchTechWordsToAvoid()
 autocmd FileType markdown call MatchTechWordsToAvoid()
+autocmd FileType text call MatchTechWordsToAvoid()
 autocmd BufWinEnter *.md call MatchTechWordsToAvoid()
 autocmd InsertEnter *.md call MatchTechWordsToAvoid()
 autocmd InsertLeave *.md call MatchTechWordsToAvoid()
