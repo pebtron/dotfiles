@@ -17,6 +17,7 @@ git_bundles = [
   "https://github.com/nanotech/jellybeans.vim.git",
   "https://github.com/mattn/gist-vim.git",
   "https://github.com/mattn/webapi-vim.git",
+  "https://github.com/plasticboy/vim-markdown.git",
 ]
 
 vim_org_scripts = [
