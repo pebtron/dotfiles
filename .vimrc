@@ -193,7 +193,7 @@ endif
 " http://css-tricks.com/words-avoid-educational-writing/
 highlight TechWordsToAvoid ctermbg=red ctermfg=white
 function MatchTechWordsToAvoid()
-  match TechWordsToAvoid /\c\<\(obviously\|basically\|simply\|of\scourse\|clearly\|just\|everyone\sknows\|however\|so,\|easy\)\>/
+  match TechWordsToAvoid /\c\<\(obviously\|basically\|simply\|of\scourse\|clearly\|just\|everyone\sknows\|however\|so,\|easy\|literally\|really\|very\)\>/
 endfunction
 autocmd FileType mail call MatchTechWordsToAvoid()
 autocmd FileType markdown call MatchTechWordsToAvoid()
