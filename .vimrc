@@ -13,24 +13,23 @@ nmap <leader>e :set expandtab!<CR>:set expandtab?<CR>
 
 " Normally we use vim-extensions. If you want true vi-compatibility
 " remove change the following statements
-set nocompatible	" Use Vim defaults (much better!)
-set backspace=2		" allow backspacing over everything in insert mode
+set nocompatible      " Use Vim defaults (much better!)
+set backspace=2       " allow backspacing over everything in insert mode
 " Now we set some defaults for the editor
-set noautoindent		" always set autoindenting on
-set nocindent       " c indent
-set nosmartindent       " smart indent
-set textwidth=72		" Don't wrap words by default
-set viminfo='20,\"50	" read/write a .viminfo file, don't store more than 50 lines of registers
-set history=50		" keep 50 lines of command line history
-set ruler		" show the cursor position all the time
-set wildmenu " thanks dhathorn
+set noautoindent      " always set autoindenting on
+set nocindent         " c indent
+set nosmartindent     " smart indent
+set textwidth=72      " Don't wrap words by default
+set viminfo='20,\"50  " read/write a .viminfo file, don't store more than 50 lines of registers
+set history=50        " keep 50 lines of command line history
+set ruler             " show the cursor position all the time
+set wildmenu          " thanks dhathorn
 set printoptions=paper:letter,duplex:off
 
 set foldmethod=marker
 "set noshelltemp
 
 set hlsearch
-set showcmd
 set nojoinspaces
 set nobackup
 set noswapfile
@@ -57,11 +56,14 @@ endif
 
 " The following are commented out as they cause vim to behave a lot
 " different from regular vi. They are highly recommended though.
-"set showcmd		" Show (partial) command in status line.
-set showmatch		" Show matching brackets.
-set ignorecase		" Do case insensitive matching
-set incsearch		" Incremental search
-"set autowrite		" Automatically save before commands like :next and :make
+set showcmd    " Show (partial) command in status line.
+set showmatch  " Show matching brackets.
+set ignorecase " Do case insensitive matching
+set incsearch  " Incremental search
+"set autowrite  " Automatically save before commands like :next and :make
+
+" Always display statusline
+set laststatus=2
 
 " personal settings
 "let g:molokai_original=1
@@ -205,3 +207,9 @@ autocmd BufWinLeave *.md call clearmatches()
 
 " Markdown folding is annoying
 let g:vim_markdown_folding_disabled=1
+
+" Gundo
+nnoremap <F5> :GundoToggle<CR>
+
+" NERDTree
+map <C-n> :NERDTreeToggle<CR>

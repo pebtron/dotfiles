@@ -18,6 +18,9 @@ git_bundles = [
   "https://github.com/mattn/gist-vim.git",
   "https://github.com/mattn/webapi-vim.git",
   "https://github.com/plasticboy/vim-markdown.git",
+  "https://github.com/sjl/gundo.vim.git",
+  "https://github.com/bling/vim-airline.git",
+  "https://github.com/scrooloose/nerdtree.git",
 ]
 
 vim_org_scripts = [
