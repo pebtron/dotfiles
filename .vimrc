@@ -213,3 +213,5 @@ nnoremap <F5> :GundoToggle<CR>
 
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
+
+let g:syntastic_puppet_puppetlint_args='--no-80chars-check'
