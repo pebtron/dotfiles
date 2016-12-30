@@ -37,3 +37,5 @@
     user = pebtron
 [http]
     sslVerify = false
+[push]
+    default = simple
