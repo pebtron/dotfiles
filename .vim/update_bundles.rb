@@ -22,6 +22,7 @@ git_bundles = [
   "https://github.com/bling/vim-airline.git",
   "https://github.com/scrooloose/nerdtree.git",
   "https://github.com/vim-scripts/VisIncr.git",
+  "https://github.com/tpope/vim-surround.git",
 ]
 
 vim_org_scripts = [
