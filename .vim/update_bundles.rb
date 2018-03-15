@@ -8,7 +8,7 @@ git_bundles = [
   "https://github.com/scrooloose/syntastic.git",
   "https://github.com/godlygeek/tabular.git",
   "https://github.com/tpope/vim-fugitive.git",
-  "https://github.com/mv/mv-vim-puppet.git",
+  "https://github.com/rodjek/vim-puppet",
   "https://github.com/tsaleh/vim-tmux.git",
   "https://github.com/nelstrom/vim-blackboard.git",
   "https://github.com/elzr/vim-json.git",
