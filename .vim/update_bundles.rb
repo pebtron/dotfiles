@@ -23,6 +23,7 @@ git_bundles = [
   "https://github.com/scrooloose/nerdtree.git",
   "https://github.com/vim-scripts/VisIncr.git",
   "https://github.com/tpope/vim-surround.git",
+  "https://github.com/cocopon/iceberg.vim",
 ]
 
 vim_org_scripts = [
