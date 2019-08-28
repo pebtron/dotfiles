@@ -156,9 +156,11 @@ if [ "$test" = "" ]; then
    if [ -e "$HOME/agent.sh" ]; then
       # remove the old file
       rm -f $HOME/agent.sh
-   fi;
-   # start a new agent
-   ssh-agent | grep -v echo >& $HOME/agent.sh
+   fi
+   # start a new agent if wanted
+   if [ -f ~/.bash/use_agent ]; then
+     ssh-agent | grep -v echo >& $HOME/agent.sh
+   fi
 fi
 test -e $HOME/agent.sh && source $HOME/agent.sh
 alias kagent="kill -9 $SSH_AGENT_PID"
