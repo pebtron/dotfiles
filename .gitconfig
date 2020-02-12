@@ -25,6 +25,9 @@
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
     lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
     ls = ls-files
+    l = "log --graph --pretty=oneline --abbrev-commit"
+    ll = "log --stat --pretty=format:\"%C(yellow)%h%Creset %C(green)%an%Creset (%ar) : %C(red)%s\""
+    lll = "log -p"
     outgoing = log @{u}..
     pr = pull --rebase
     sb = show-branch
