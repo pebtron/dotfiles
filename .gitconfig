@@ -42,3 +42,5 @@
     sslVerify = false
 [pull]
     rebase = true
+[remote "origin"]
+    prune = true
