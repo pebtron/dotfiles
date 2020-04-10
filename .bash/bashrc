@@ -43,6 +43,14 @@ function sslinspect () {
     | openssl x509 -noout -subject -dates
 }
 
+# SSL SAN
+function sslsan () {
+  echo \
+    | openssl s_client -connect ${1}:${2:-443} 2>&1 \
+    | openssl x509 -noout -text \
+    | awk -F, -v OFS="\n" '/DNS:/{x=gsub(/ *DNS:/, ""); $1=$1; print $0}'
+}
+
 function susu() {
   if [ -n "$SSH_TTY" ]; then
     sudo bash -c "SSH_TTY=$SSH_TTY\
