@@ -42,6 +42,12 @@ function sslinspect () {
     | openssl x509 -noout -subject -dates
 }
 
+# SSL multi
+function sslmulti () {
+  openssl crl2pkcs7 -nocrl -certfile ${1} \
+    | openssl pkcs7 -print_certs -noout
+}
+
 # SSL SAN
 function sslsan () {
   echo \
