@@ -24,6 +24,7 @@ git_bundles = [
   "https://github.com/vim-scripts/VisIncr.git",
   "https://github.com/tpope/vim-surround.git",
   "https://github.com/cocopon/iceberg.vim",
+  "https://github.com/dracula/vim.git",
 ]
 
 vim_org_scripts = [
@@ -46,6 +47,10 @@ FileUtils.mkdir(bundles_dir)
 
 git_bundles.each do |url|
   dir = url.split('/').last.sub(/\.git$/, '')
+  # Dracula.vim hack
+  if dir == 'vim'
+    dir = 'dracula.vim'
+  end
   puts "unpacking #{url} into #{dir}"
   `git clone #{url} #{dir}`
   FileUtils.rm_rf(File.join(dir, ".git"))
