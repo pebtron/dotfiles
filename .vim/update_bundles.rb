@@ -2,18 +2,14 @@
 # Source: http://tammersaleh.com/posts/the-modern-vim-config-with-pathogen
 
 git_bundles = [ 
-  "https://github.com/vim-scripts/gnupg.vim.git",
-  "https://github.com/vim-scripts/nginx.vim.git",
-  "https://github.com/msanders/snipmate.vim.git",
+  "https://github.com/jamessan/vim-gnupg",
   "https://github.com/scrooloose/syntastic.git",
   "https://github.com/godlygeek/tabular.git",
   "https://github.com/tpope/vim-fugitive.git",
   "https://github.com/rodjek/vim-puppet",
   "https://github.com/tsaleh/vim-tmux.git",
-  "https://github.com/nelstrom/vim-blackboard.git",
   "https://github.com/elzr/vim-json.git",
   "https://github.com/tomasr/molokai.git",
-  "https://github.com/altercation/vim-colors-solarized.git",
   "https://github.com/nanotech/jellybeans.vim.git",
   "https://github.com/mattn/gist-vim.git",
   "https://github.com/mattn/webapi-vim.git",
