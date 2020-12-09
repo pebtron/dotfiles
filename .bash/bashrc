@@ -141,6 +141,24 @@ On_IPurple='\[\e[10;95m\]'  # Purple
 On_ICyan='\[\e[0;106m\]'    # Cyan
 On_White='\[\e[0;107m\]'    # White
 # }}}
+# Advanced prompt with 256 colors {{{
+# Source: https://gist.github.com/ricardochimal/293517
+function boldtext {
+    echo "\\[\\033[1m\\]"$1"\\[\\033[0m\\]"
+}
+
+function bgcolor {
+    echo "\\[\\033[48;5;"$1"m\\]"
+}
+
+function fgcolor {
+    echo "\\[\\033[38;5;"$1"m\\]"
+}
+
+function resetcolor {
+    echo "\\[\\e[0m\\]"
+}
+# }}}
 
 # Completion
 test -f /etc/bash_completion && source /etc/bash_completion
