@@ -140,6 +140,17 @@ On_IBlue='\[\e[0;104m\]'    # Blue
 On_IPurple='\[\e[10;95m\]'  # Purple
 On_ICyan='\[\e[0;106m\]'    # Cyan
 On_White='\[\e[0;107m\]'    # White
+
+# Dump colors
+# Also fun: curl -s https://gist.githubusercontent.com/HaleTom/89ffe32783f89f403bba96bd7bcd1263/raw/ | bash
+function dump_colors() {
+  for i in {0..255} ; do
+    printf "\x1b[48;5;%sm%3d\e[0m " "$i" "$i"
+    if (( i == 15 )) || (( i > 15 )) && (( (i-15) % 6 == 0 )); then
+      printf "\n";
+    fi
+  done
+}
 # }}}
 # Advanced prompt with 256 colors {{{
 # Source: https://gist.github.com/ricardochimal/293517
