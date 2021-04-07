@@ -217,5 +217,8 @@ map <C-n> :NERDTreeToggle<CR>
 " Ignore 80chars for syntastic puppet
 let g:syntastic_puppet_puppetlint_args='--no-80chars-check'
 
+" yamllint
+let g:syntastic_yaml_checkers = ['yamllint']
+
 " vim-puppet doesn't like textwidth=72
 autocmd FileType puppet setl tw=0
