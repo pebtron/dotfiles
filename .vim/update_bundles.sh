@@ -23,7 +23,6 @@ git clone https://github.com/mattn/webapi-vim.git
 
 # Syntax
 git clone https://github.com/elzr/vim-json.git
-git clone https://github.com/tpope/vim-markdown.git
 git clone https://github.com/rodjek/vim-puppet.git
 curl "https://www.vim.org/scripts/download_script.php?src_id=15948" -o spamassassin.vim
 
