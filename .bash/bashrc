@@ -181,6 +181,8 @@ test -f $DSH_WEBADMIN && source $DSH_WEBADMIN
 # Source pdsh tools
 PDSH_WEBADMIN="/home/bartonp/webadmin/tools/dsh/pdsh.bash"
 test -f $PDSH_WEBADMIN && source $PDSH_WEBADMIN
+# Source bt tools
+test -f ~/.bash/bt.sh && source ~/.bash/bt.sh
 
 # Aliases
 alias rdp='rdesktop -g 1024x768 -u _bartonp'
