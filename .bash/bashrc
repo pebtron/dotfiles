@@ -191,7 +191,7 @@ alias umutt='mutt -F ~/.mutt/muttrc-uc'
 alias egreat='lftp -e "set ftp:ssl-force no; open egreat"'
 alias wdtvlive='lftp -e "set ftp:ssl-force no; open wdtvlive"'
 alias gpgwa="gpg -ea -r bartonp -r foo"
-alias cfvcheck="find . -name \"*.sfv\" -execdir cfv -f {} \;"
+alias cksfvcheck="find . -name \"*.sfv\" -execdir cksfv -f {} \;"
 alias tmux='tmux -2'
 
 # http://drupal.star.bnl.gov/STAR/blog-entry/jeromel/2009/feb/06/how-safely-start-ssh-agent-bashrc
