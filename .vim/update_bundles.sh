@@ -18,6 +18,8 @@ git clone https://github.com/tpope/vim-fugitive.git
 git clone https://github.com/tpope/vim-surround.git
 git clone https://github.com/bling/vim-airline.git
 git clone https://github.com/scrooloose/nerdtree.git
+git clone https://github.com/airblade/vim-gitgutter.git
+git clone https://github.com/tpope/vim-sensible
 
 # Obscure
 git clone https://github.com/vim-scripts/VisIncr.git
