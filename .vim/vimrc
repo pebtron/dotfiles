@@ -4,6 +4,10 @@ execute pathogen#infect()
 execute pathogen#helptags()
 filetype plugin indent on
 
+if has("syntax")
+  syntax on
+endif
+
 set modelines=5
 
 " Tab settings
@@ -46,13 +50,9 @@ set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.i
 "endif
 
 " Help with 256 colors
-if &term =~ "screen"
-  set t_Co=256
-endif
-
-if has("syntax")
-  syntax on
-endif
+"if &term =~ "screen"
+"  set t_Co=256
+"endif
 
 " The following are commented out as they cause vim to behave a lot
 " different from regular vi. They are highly recommended though.
