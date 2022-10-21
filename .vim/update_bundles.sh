@@ -12,7 +12,7 @@ cd ~/.vim/bundle
 
 # Essentials
 git clone https://github.com/jamessan/vim-gnupg.git
-git clone https://github.com/vim-syntastic/syntastic.git
+git clone https://github.com/dense-analysis/ale.git
 git clone https://github.com/godlygeek/tabular.git
 git clone https://github.com/tpope/vim-fugitive.git
 git clone https://github.com/tpope/vim-surround.git
@@ -30,9 +30,9 @@ git clone https://github.com/mattn/gist-vim.git
 git clone https://github.com/mattn/webapi-vim.git
 
 # Syntax
-git clone https://github.com/elzr/vim-json.git
+# git clone https://github.com/elzr/vim-json.git
 git clone https://github.com/rodjek/vim-puppet.git
-curl "https://www.vim.org/scripts/download_script.php?src_id=15948" -o spamassassin.vim
+# curl "https://www.vim.org/scripts/download_script.php?src_id=15948" -o spamassassin.vim
 
 # Colors
 git clone https://github.com/dracula/vim.git dracula
