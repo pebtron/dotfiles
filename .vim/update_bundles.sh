@@ -1,9 +1,14 @@
 #!/bin/bash
+#
+# Inspired from https://github.com/tpope/vim-pathogen
 
 echo "trashing everything (lookout!)"
-rm -rf bundle/*
+rm -rf ~/.vim/autoload ~/.vim/bundle
 
-cd bundle
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+  curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+cd ~/.vim/bundle
 
 # Essentials
 git clone https://github.com/jamessan/vim-gnupg.git
