@@ -195,7 +195,7 @@ autocmd FileType puppet setl tw=0
 " personal settings
 "let g:molokai_original=1
 "colorscheme molokai
-"let g:dracula_italic = 0
+let g:dracula_italic = 0
 colorscheme dracula
 " Fix mouse selection
 highlight Normal ctermbg=None
