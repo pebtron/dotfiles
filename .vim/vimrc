@@ -65,15 +65,6 @@ set incsearch  " Incremental search
 " Always display statusline
 set laststatus=2
 
-" personal settings
-"let g:molokai_original=1
-colorscheme molokai
-"set background=dark
-"let g:solarized_termcolors=256
-"colorscheme solarized
-"set background=dark
-"colorscheme jellybeans
-
 " Select a different colorscheme when in Mutt
 "autocmd FileType mail colorscheme jellybeans
 
@@ -195,11 +186,16 @@ let g:vim_markdown_folding_disabled=1
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
 
-" Ignore 80chars for syntastic puppet
-let g:syntastic_puppet_puppetlint_args='--no-80chars-check'
-
-" yamllint
-let g:syntastic_yaml_checkers = ['yamllint']
+" vim-gitgutter
+map <C-g> :GitGutterToggle<CR>
 
 " vim-puppet doesn't like textwidth=72
 autocmd FileType puppet setl tw=0
+
+" personal settings
+"let g:molokai_original=1
+"colorscheme molokai
+"let g:dracula_italic = 0
+colorscheme dracula
+" Fix mouse selection
+highlight Normal ctermbg=None
