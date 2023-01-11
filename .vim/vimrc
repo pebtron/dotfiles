@@ -1,7 +1,29 @@
 " Vim settings, a work in progress since 1999
 
-execute pathogen#infect()
-execute pathogen#helptags()
+" vim-plug
+call plug#begin()
+" Essentials
+Plug 'jamessan/vim-gnupg'
+Plug 'dense-analysis/ale'
+Plug 'godlygeek/tabular'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'bling/vim-airline'
+Plug 'scrooloose/nerdtree'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-commentary'
+" Gist
+Plug 'mattn/gist-vim'
+Plug 'mattn/webapi-vim'
+" Syntax
+Plug 'rodjek/vim-puppet'
+" Colors
+Plug 'dracula/vim', { 'name': 'dracula' }
+Plug 'tomasr/molokai'
+Plug 'cocopon/iceberg.vim'
+call plug#end()
+
 filetype plugin indent on
 
 if has("syntax")

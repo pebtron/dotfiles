@@ -2,4 +2,4 @@
 .bash/prompt.sh
 .bash/use_agent
 .vim/autoload/
-.vim/bundle/
+.vim/plugged/
