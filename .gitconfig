@@ -1,5 +1,4 @@
 # vim: ft=config
-# Cheatsheet: http://cheat.errtheblog.com/s/git
 [user]
     name = Paul Barton
     email = pbarton@gmail.com
@@ -12,8 +11,6 @@
     create-remote-branch = "!bash -c \"[[ $# = 1 ]] || echo Missing argument: new branch name && git push origin HEAD:$1 && git checkout -b $1 origin/$1\""
     delete-remote-branch = "!bash -c \"[[ $# = 1 ]] && git push origin :$1 || echo Missing argument: remote branch name\""
     df = diff
-    # http://lukas.zapletalovi.com/2011/04/my-git-aliases.html
-    h = !git --no-pager log --abbrev-commit --pretty=oneline origin/master..HEAD
     ign = ls-files -o -i --exclude-standard
     incoming = "!git remote update -p; git log ..@{u}"
     latest = rev-list -n 1 HEAD
@@ -22,8 +19,6 @@
     lpa = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --all
     # Useful on a branch: git co imssl && git loglr origin/master...HEAD
     loglr = log --left-right --abbrev-commit --pretty=oneline
-    lol = log --graph --decorate --pretty=oneline --abbrev-commit
-    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
     ls = ls-files
     l = "log --graph --pretty=oneline --abbrev-commit"
     ll = "log --stat --pretty=format:\"%C(yellow)%h%Creset %C(green)%an%Creset (%ar) : %C(red)%s\""
@@ -31,8 +26,6 @@
     outgoing = log @{u}..
     pr = pull --rebase
     sb = show-branch
-    sg = !git show-graph
-    show-graph = log --graph --abbrev-commit --pretty=oneline
     st = status
     today = log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative
     up = !git fetch origin && git rebase origin/master
