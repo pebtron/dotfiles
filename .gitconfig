@@ -8,6 +8,7 @@
     br = branch
     ci = commit
     co = checkout
+    contrib = shortlog -e --summary --numbered
     create-remote-branch = "!bash -c \"[[ $# = 1 ]] || echo Missing argument: new branch name && git push origin HEAD:$1 && git checkout -b $1 origin/$1\""
     delete-remote-branch = "!bash -c \"[[ $# = 1 ]] && git push origin :$1 || echo Missing argument: remote branch name\""
     df = diff
