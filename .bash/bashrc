@@ -15,7 +15,6 @@ if [ -d /opt/puppetlabs/bin ]; then
 fi
 export EDITOR='vim'
 export VISUAL='vim'
-#export CDPATH=".:~:~/Documents"
 export HISTCONTROL="ignorespace"
 export HISTFILESIZE=1000
 export HISTIGNORE="&:ls:ls -al:[bf]g:exit"
@@ -25,15 +24,6 @@ shopt -s checkwinsize
 shopt -s cmdhist
 shopt -s histappend
 #set -o vi
-
-# Keychain
-# Mac: eval `keychain --clear --eval --agents ssh --inherit any id_dsa`
-#eval `keychain --eval --agents ssh id_dsa`
-
-# Todo.sh
-#alias t="todo.sh"
-#source ~/.bash/bash_completion.d/todo_completer.sh
-#complete -F _todo_sh -o default t
 
 # SSL inspect
 function sslinspect () {
@@ -175,23 +165,12 @@ function resetcolor {
 test -f /etc/bash_completion && source /etc/bash_completion
 test -f ~/.bash/bash_completion && source ~/.bash/bash_completion
 
-# Source dsh tools
-DSH_WEBADMIN="/home/bartonp/webadmin/tools/dsh/dsh.bash"
-test -f $DSH_WEBADMIN && source $DSH_WEBADMIN
-# Source pdsh tools
-PDSH_WEBADMIN="/home/bartonp/webadmin/tools/dsh/pdsh.bash"
-test -f $PDSH_WEBADMIN && source $PDSH_WEBADMIN
 # Source bt tools
 test -f ~/.bash/bt.sh && source ~/.bash/bt.sh
 
 # Aliases
-alias rdp='rdesktop -g 1024x768 -u _bartonp'
 alias grep='grep --color=auto'
 alias umutt='mutt -F ~/.mutt/muttrc-uc'
-alias egreat='lftp -e "set ftp:ssl-force no; open egreat"'
-alias wdtvlive='lftp -e "set ftp:ssl-force no; open wdtvlive"'
-alias gpgwa="gpg -ea -r bartonp -r foo"
-alias cksfvcheck="find . -name \"*.sfv\" -execdir cksfv -f {} \;"
 alias tmux='tmux -2'
 
 # http://drupal.star.bnl.gov/STAR/blog-entry/jeromel/2009/feb/06/how-safely-start-ssh-agent-bashrc
@@ -220,10 +199,8 @@ __git_ps1 () {
 
 # Mac OS X
 if [[ `uname` == "Darwin" ]]; then
-  export PATH="$PATH:/Developer/usr/bin:~/Documents/bin:/opt/local/bin"
   alias ls='ls -aFG' # colors
   alias ll='ls -alG' # colors
-  test -r /sw/bin/init.sh && . /sw/bin/init.sh
   ulimit -n 8192 # mutt on Mac needs lots of open files
   if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
