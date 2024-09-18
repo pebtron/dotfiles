@@ -106,12 +106,6 @@ iab tpyo        typo
 iab uchciago    uchicago
 iab woudl       would
 iab yoru        your
-iab EAUP        EAUP http://webspace.uchicago.edu/publicserver/
-"cab SFTP        r ~/Mail/uchicago/00sftp.txt
-"cab NOSFTP      r ~/Mail/uchicago/00reasons.txt
-
-" svn blame, source: http://tammersaleh.com/posts/quick-vim-svn-blame-snippet
-vmap gl :<C-U>!svn blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
 
 " Reload .vimrc
 nmap ,s :source ~/.vimrc
@@ -130,12 +124,6 @@ set listchars=tab:>-,trail:-
 
 " Toggle paste
 map <leader>p :set paste!<CR>:set paste?<CR>
-
-" tablify.pl macro
-map ,t !ap~/webadmin/tools/bin/tablify.pl<CR>
-
-" SVN diff mapping
-map <Leader>9 :new<CR>:read !svn diff<CR>:set syntax=diff buftype=nofile<CR>gg
 
 "setlocal spell spelllang=en_us
 
