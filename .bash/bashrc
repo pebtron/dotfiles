@@ -7,7 +7,6 @@ fi
 
 # Exports
 export GPG_TTY=$(tty)
-export GREP_COLOR="mt=1;36"
 export PATH="$PATH:$HOME/bin:/usr/local/bin:/usr/local/sbin"
 PATH=$PATH:$HOME/bin
 if [ -d /opt/puppetlabs/bin ]; then
@@ -201,6 +200,7 @@ __git_ps1 () {
 if [[ `uname` == "Darwin" ]]; then
   alias ls='ls -aFG' # colors
   alias ll='ls -alG' # colors
+  export GREP_COLOR="1;36"
   ulimit -n 8192 # mutt on Mac needs lots of open files
   if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
@@ -209,6 +209,7 @@ else
   eval "`dircolors -b`"
   alias ls='ls -aF --color=auto'
   alias ll='ls -al --color=auto'
+  export GREP_COLOR="mt=1;36"
 fi
 
 # Prompt
