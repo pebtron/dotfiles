@@ -38,6 +38,11 @@ function sslmulti () {
     | openssl pkcs7 -print_certs -noout
 }
 
+## SSL chain dump
+function sslchaindump () {
+  while openssl x509 -noout -text; do :; done < ${1}
+}
+
 # SSL SAN
 function sslsan () {
   echo \
