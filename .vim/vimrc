@@ -22,8 +22,6 @@ Plug 'rodjek/vim-puppet'
 Plug 'dracula/vim', { 'name': 'dracula' }
 Plug 'tomasr/molokai'
 Plug 'cocopon/iceberg.vim'
-" Emoji
-Plug 'junegunn/vim-emoji'
 call plug#end()
 
 filetype plugin indent on
