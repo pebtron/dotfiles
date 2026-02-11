@@ -1,3 +1,9 @@
+# zsh specific stuff
+
+# Make meta-delete work
+autoload -U select-word-style
+select-word-style bash
+
 # Exports
 export GPG_TTY=$(tty)
 export PATH="$PATH:$HOME/bin:/usr/local/bin:/usr/local/sbin"
