@@ -88,5 +88,8 @@ else
   export GREP_COLOR="mt=1;36"
 fi
 
+# Claude Code
+source $HOME/dotfiles/claude.sh
+
 # Prompt
 eval "$(starship init zsh)"
