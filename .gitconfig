@@ -32,6 +32,11 @@
     up = !git fetch origin && git rebase origin/master
 [github]
     user = pebtron
+[gpg]
+    format = ssh
+[gpg "ssh"]
+    allowedSignersFile = ~/.ssh/allowed_signers
+    defaultKeyCommand = ssh-add -L
 [http]
     sslVerify = false
 [pull]
