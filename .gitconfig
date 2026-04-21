@@ -1,7 +1,7 @@
 # vim: ft=config
 [user]
     name = Paul Barton
-    email = 3857053+pebtron@users.noreply.github.com
+    email = pebtron@users.noreply.github.com
 [color]
     ui = auto
 [alias]
