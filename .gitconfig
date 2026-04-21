@@ -4,6 +4,8 @@
     email = pebtron@users.noreply.github.com
 [color]
     ui = auto
+[commit]
+    gpgsign = true
 [alias]
     br = branch
     ci = commit
