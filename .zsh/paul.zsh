@@ -88,6 +88,9 @@ else
   export GREP_COLOR="mt=1;36"
 fi
 
+# Homebrew
+eval "$(/opt/homebrew/bin/brew shellenv zsh)"
+
 # Claude Code
 source $HOME/dotfiles/claude.sh
 
